@@ -30,7 +30,7 @@ onload = () => {
     $('#username').val(user.username)
     $('#password').val(user.password)
     $('#startDate').val(user.startTime)
-    $('#endDate').val(user.endTime)
+    $('#endDate').val(user.stopTime)
   }
 }
 
@@ -57,7 +57,7 @@ const handleCreateUser = () => {
   if(user.id) {
 
     $.ajax({
-      url: API_BASE_URL + '/admin/modifyUserInfo',
+      url: API_BASE_URL + '/admin/modifyUser',
       type: 'POST',
       data: JSON.stringify(user),
       dataType: 'json',
@@ -70,7 +70,6 @@ const handleCreateUser = () => {
         }
       }
     })
-
   } else {
     // 新建
     $.ajax({

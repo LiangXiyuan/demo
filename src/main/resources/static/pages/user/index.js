@@ -11,7 +11,7 @@ const fetchUserList = () => {
   let params = {
     pageNum,
     pageSize: 10,
-    userName: $('#username').val()
+    username: $('#username').val()
   }
   $.ajax({
     url: API_BASE_URL + '/admin/queryUserList',
@@ -31,10 +31,10 @@ const fetchUserList = () => {
             <td>${item.startTime}</td>
             <td>${item.stopTime}</td>
             <td>
-              <button type="button" class="btn btn-link">重置密码</button>
+              <button type="button" class="btn btn-link" >重置密码</button>
               <button type="button" class="btn btn-link" onclick="handleEdit('${item.id}')">编辑</button>
               <button type="button" class="btn btn-link btn-red">关闭</button>
-              <button type="button" class="btn btn-link btn-red" onclick="deleteUser('${item.id}')">删除</button>
+              <button type="button" class="btn btn-link btn-red" onclick="deleteUser('${item.username}')">删除</button>
             </td>
           </tr>
         `)
@@ -42,9 +42,9 @@ const fetchUserList = () => {
     }
   })
 }
-const deleteUser = (id) => {
+const deleteUser = (username) => {
   let params = {
-    id: id
+    username: username
   }
   $.ajax({
     url: API_BASE_URL + '/admin/deleteUserinfo',
@@ -80,3 +80,4 @@ const handleEdit = (id) => {
   $util.setPageParam('user', user)
   location.href = '/pages/createUser/index.html'
 }
+
