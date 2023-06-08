@@ -1,0 +1,5 @@
+2023-06-03 16:56:50.334  INFO 27168 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.2 on LAPTOP-SEBE6MQD with PID 27168 (started by 27642 in E:\大学资料\大二下实训\Code\demo)
+2023-06-03 16:56:50.335  INFO 27168 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-06-03 16:56:51.394  INFO 27168 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-06-03 16:56:51.619  INFO 27168 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 1.504 seconds (JVM running for 2.173)
+2023-06-03 16:56:52.220  INFO 27168 --- [main] com.example.demo.DemoApplicationTests    : >>delete用户删除测试成功
